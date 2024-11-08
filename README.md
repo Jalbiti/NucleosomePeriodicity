@@ -11,6 +11,7 @@ This repository contains the code used in the article "An integrated machine-lea
 - [Nucleosome Data](#Nucleosome-Data)
 - [Data Model](#Data-Model)
   - [Running the classifier](#Running-the-classifier)
+  - [Placing the emitters](#Placing-the-emitter)
   - [Signal Transmission Theory](#STT)
  
 <a name="Required-Tools-and-Packages"></a>
@@ -50,6 +51,11 @@ The integrated prediction of nucleosome architectures within gene bodies is a re
 The current version with the classifier details can be found at `nfr_clf.py`. To run the classifier and reproduce the results simply run:
 
 `python main.py`
+
+<a name="Placing-the-emitters"></a>
+##### Placing the emitters
+
+Once you have the model saved and you have run it for all TSS and TTS, you can then place the emitters as described in our article.
 
 <a name="STT"></a>
 ##### Signal Transmission Theory
