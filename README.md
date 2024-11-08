@@ -1,6 +1,6 @@
 # NucleosomePeriodicity
 
-This repository contains the code used in the article "An integrated machine-learning model to predict nucleosome architecture" by Sala et al. published in NAR. The model combines a neural network to predict nucleosome free regions together with a statistical positioning methodology to reconstitute intragenic nucleosome architectures.
+This repository contains the code used in the article "An integrated machine-learning model to predict nucleosome architecture" by _Sala et al._ published in NAR. The model combines a neural network to predict nucleosome free regions together with a statistical positioning methodology to reconstitute intragenic nucleosome architectures.
 
 <p align="center">
 <img src="assets/GraphicalAbstract.png" width="600" height="600">
