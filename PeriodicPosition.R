@@ -1,7 +1,5 @@
 rm(list = ls())
-require("oscaR")
 require("nucleR")
-require("nucPredR")
 require("IRanges")
 require("rtracklayer")
 require("GenomicRanges")
