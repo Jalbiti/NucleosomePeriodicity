@@ -63,7 +63,7 @@ class Features:
 
     all_seqs = []
     for i in range(len(self.chr_l)):
-      chr = pd.read_csv("NFR_pred/" + self.chr_l[i] + ".fsa")
+      chr = pd.read_csv("data/" + self.chr_l[i] + ".fsa")
 
       sequence  = ""
       for i in range(len(chr)):
@@ -74,7 +74,7 @@ class Features:
 
   def get_energy(self):
     
-    with open("NFR_pred/ene.json") as f:
+    with open("data/ene.json") as f:
       ene = json.load(f)
 
     ene_chr = np.array(ene)[np.array(self.num) - [1]*len(self.num)]
@@ -97,7 +97,7 @@ class Features:
 
   def get_tfbs(self, seq):
 
-    all_tfbs = pd.read_csv("NFR_pred/sites.csv")
+    all_tfbs = pd.read_csv("data/sites.csv")
     tfbs_l = []
     for i in range(len(self.chr_n)):
       tfbs_t = all_tfbs[all_tfbs.seqid == self.chr_n[i]]
@@ -113,10 +113,10 @@ class Features:
     self.tfbs_l = self.get_tfbs(seq)
 
     # positions will take the center of nfr to get window of descriptor
-    tss = pd.read_csv("NFR_pred/tss.classes.csv")
+    tss = pd.read_csv("data/tss.classes.csv")
     tss = tss[(tss['descr'] == "W-open-W") | (tss['descr'] == "W-closed-W")]
     tss = tss[tss['dist'] <= self.window]
-    # tts = pd.read_csv("NFR_pred/tts.classes.csv")
+    # tts = pd.read_csv("data/tts.classes.csv")
     # tts = tts[(tts['descr'] == "W-open-W") | (tts['descr'] == "W-closed-W")].reset_index()
 
     tss = tss[tss.seqname.isin(self.chr_n)]
