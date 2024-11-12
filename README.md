@@ -64,4 +64,4 @@ Once the emitters have been found, the last step is to send signals from both th
 
 `Rscript PeriodicPosition.R`
 
-
+This script will generate the `data/covPredAll.RData` file that contains the predicted coverage to be compared with the experimental nucleosome data.
